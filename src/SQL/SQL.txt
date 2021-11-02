@@ -1,0 +1,28 @@
+CREATE TABLE admin (
+  	admin_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    admin_email varchar(255) NOT NULL,
+    admin_pass varchar(255) NOT NULL
+);
+
+
+CREATE TABLE orders (
+	meal_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	meal_unique_id BIGINT(20) NOT NULL,
+   	meal_name varchar(200) NOT NULL,
+	meal_options varchar(255) NOT NULL,
+    	meal_is_hot varchar(100) NOT NULL,
+    	meal_how_get varchar(255) NOT NULL,
+    	meal_how_many int(10) NOT NULL,
+    	meal_price varchar(100) NOT NULL,
+    	meal_phone varchar(100) NOT NULL,
+    	is_finished varchar(100) NOT NULL
+);
+
+CREATE TABLE meals (
+	meal_id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    	meal_name varchar(100) NOT NULL,
+    	meal_price BIGINT(20) NOT NULL,
+    	meal_options varchar(255) NOT NULL,
+	meal_options_price varchar(100) NOT NULL,
+    	meal_img varchar(255) NOT NULL
+);
